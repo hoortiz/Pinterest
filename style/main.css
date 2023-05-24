@@ -3,10 +3,29 @@
     box-sizing: border-box;
     --column-width: 14.75rem;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,メイリオ,Meiryo,ＭＳ Ｐゴシック,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    --row-increment: 0.5rem;
+    --card_small: 40;
+    --card_medium: 50;
+    --card_big: 60;
+    --card-border: 1.5rem;
 }
 
 body{
     margin: 0;   
+}
+
+@media (max-width: 1250px) {
+    .logo{
+       height: 1000px; 
+    }
+  }
+
+* {
+    margin: 0;  
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
 }
 
 nav{
@@ -15,6 +34,11 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #ffffff;
+    z-index: 1;
 }
 
 .logo {
@@ -69,7 +93,6 @@ nav{
     text-align: center;
 }
 
-
 .create{
     height: 48px; 
     min-width: 60px;
@@ -100,7 +123,6 @@ nav{
     text-decoration: none;
     color: #000000;
 }
-
 
 .create-div{
     height: 48px;
@@ -139,7 +161,7 @@ nav{
     flex-direction: row;
 }
 
-.notificaciones {
+.notifications {
     height: 48px;
     width: 48px;
     align-items: center;
@@ -148,18 +170,32 @@ nav{
     display: grid;
 }
 
-.notificaciones-svg{
+.notifications-svg{
     height:24px;
     width:24px; 
 }
 
-.notificaciones-path{    
+.notifications-path{    
     color: #5f5f5f;
     fill: currentColor;
     vertical-align: middle;
 }
 
-.mensajes {
+.finder{
+    border: 0px;
+}
+
+.icono-busqueda{
+    padding: 1rem 0%;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/search-icon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.message {
     height: 48px;
     width: 48px;
     align-items: center;
@@ -168,18 +204,18 @@ nav{
     display: grid;
 }
 
-.mensajes-svg{
+.message-svg{
     height:24px;
     width:24px; 
 }
 
-.mensajes-path{    
+.message-path{    
     color: #5f5f5f;
     fill: currentColor;
     vertical-align: middle;
 }
 
-.perfil {
+.profile-img {
     height: 48px;
     width: 48px;
     align-items: center;
@@ -188,11 +224,11 @@ nav{
     display: grid;
 }
 
-.perfil-border{
+.profile-img-border{
     box-sizing: border-box;
 }
 
-.perfil-img{    
+.profile-img-img{    
     height: 24px;
     width: 24px;
     color: transparent;
@@ -257,4 +293,105 @@ nav{
 
 #navbar-pinterest{
     width: 100%;
+}
+
+#content{
+    margin-top: 4rem;
+}
+
+
+#pin-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--column-width));
+    width: 100%;
+    grid-auto-rows: var(--row-increment);
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.card-content {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    border-radius: var(--card-border);
+}
+.card-text {
+    padding: 0.5rem;
+    height: 2rem;
+    width: 50%;
+    color: black;
+}
+
+.save-button {
+    padding: 0.5rem 0.5rem;
+    height: 2rem;
+    width: 50%;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #dc0f0f;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    justify-content: right;
+}
+
+.card-content:hover{
+    opacity: 1;
+}
+
+.more-options {
+    padding: 0.5rem 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    align-content: center;
+    font-weight: 800;
+}
+
+.card-big {
+    grid-row-end: span var(--card_big);
+    background-color: rgb(190, 20, 23);
+
+}
+
+.card-medium {
+    grid-row-end: span var(--card_medium);
+    background-color: rgb(10, 28, 196);
+}
+
+.card-small {
+    grid-row-end: span var(--card_small);
+    background-color: rgb(2, 164, 48);
+}
+
+.card-image {
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card-border);
+}
+
+.help-button {
+    position: fixed;
+    background-color: #f0ffff;
+    border: 1px solid #c2c45c;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    bottom: 1.8rem;
+    right: 2rem;
+    color: #000000;
+    cursor: pointer;
 }
