@@ -278,9 +278,13 @@ nav{
 
 #navcenter-textarea input{
     padding-left: 1rem;
-    border: 0px;
+    border: 0px solid;
     width: 100%;
-    background: #e9e9e9;
+    background-color: transparent;
+}
+
+#navcenter-textarea input:focus{
+    outline: none;
 }
 
 #navcenter-textarea input:hover{
