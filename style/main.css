@@ -233,6 +233,26 @@ nav{
 
 #navcenter-textarea{
     width: 90%;
+    display: flex;
+    padding: 5px 8px 0 14px;
+    z-index: 3;
+    min-height: 44px;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    border-radius: 24px; 
+    margin: 0 auto;
+    width: 638px;
+    max-width: 584px;
+    align-items: center;    
+}
+
+#navcenter-textarea:hover{
+    background: #f4f9ff;
+}
+
+#navcenter-textarea input{
+    border: 0px;
+    width: 100%;
 }
 
 #navbar-pinterest{
