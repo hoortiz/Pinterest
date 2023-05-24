@@ -326,6 +326,7 @@ nav{
     color: black;
 }
 
+
 .save-button {
     padding: 0.5rem 0.5rem;
     height: 2rem;
@@ -341,10 +342,8 @@ nav{
     opacity: 1;
 }
 
-.more-options {
+.share {
     padding: 0.5rem 0.5rem;
-    height: 3rem;
-    width: 3rem;
     color: #000000;
     background-color: #ffffff;
     border: none;
@@ -353,6 +352,19 @@ nav{
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+    align-content: center;
+}
+
+.more-options {
+    padding: 0.5rem 0.5rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1rem;
+    right: 3.5rem;
     align-content: center;
 }
 
