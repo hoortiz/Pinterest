@@ -371,16 +371,19 @@ nav{
 .card-big {
     grid-row-end: span var(--card_big);
     background-color: rgb(190, 20, 23);
+    background-image: url("../img/card-big.jpg");
 }
 
 .card-medium {
     grid-row-end: span var(--card_medium);
     background-color: rgb(10, 28, 196);
+    background-image: url("../img/card-medium.jpg");
 }
 
 .card-small {
     grid-row-end: span var(--card_small);
     background-color: rgb(2, 164, 48);
+    background-image: url("../img/card-small.jpg");
 }
 
 .card-image {
